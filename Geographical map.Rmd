@@ -25,21 +25,24 @@ library(maps)
 library(mapplots)
 ```
 
+```{r}
+mutations
+```
+
+
 ## Plot 
 
-```{r}
-mutations_ref$Location <- as.numeric(mutations_ref$Location)
-str(mutations_ref)
-```
 
 ```{r}
 worldmap <- map_data ("world")
 
 mapplot1 <- ggplot(worldmap) + 
-  geom_map(data = worldmap, map = worldmap, aes(x = long, y = lat, map_id = region), col = "white", fill = "lightgreen") 
+  geom_map(data = worldmap, map = worldmap, aes(x = long, y = lat, map_id = region), fill=NA, color="black") +
+  coord_quickmap() +
+  theme_bw()
 
-mapplot1 +  geom_scatterpie(aes(x=longitude, y=latitude, group = country, r = multiplier*6), 
-                  data = final_data, cols = colnames(final_data[,c(2:11)]))
+mapplot1 +  
+  geom_scatterpie(data = mutations, aes(x= , y = )) 
 
 mapplot1
 
