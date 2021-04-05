@@ -17,6 +17,7 @@ separate_fasta <- function(fasta){
 }
 
 
+
 # Takes df created by *separate_fasta*, and a start seq, and end seq (as String)
 # Returns df w/ new "Target" col: sequence w/in & including start:end motifs
 isolate_seq <- function(df, start, end){

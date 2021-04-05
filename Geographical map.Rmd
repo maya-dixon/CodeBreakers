@@ -7,6 +7,9 @@ output: html_document
 
 # Graphical representation on  world map 
 
+## Introduction 
+
+
 ## Load the libraries 
 
 ```{r}
@@ -26,12 +29,20 @@ library(mapplots)
 ```
 
 ```{r}
-mutations
+countries %>% 
+  group_by(Geo_Location) %>%
+  
+```
+
+## Create a data set with the longitude and latituded
+
+```{r}
+
 ```
 
 
-## Plot 
 
+## Plot 
 
 ```{r}
 worldmap <- map_data ("world")
@@ -48,7 +59,7 @@ mapplot1
 
 ```
 
-
+## Conclusion 
 
 
 

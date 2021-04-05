@@ -29,7 +29,7 @@ More to follow...
 ### Loading libraries
 ```{r}
 library(ape)
-library(adegenet)
+library(ade4)
 library(dplyr)
 library(stringr)
 library(readr)
@@ -132,6 +132,7 @@ end_motif <- substr(spike_ref$Target,
 # Removing excess variables
 rm(fileName, spike_fasta)
 ```
+
 
 
 
